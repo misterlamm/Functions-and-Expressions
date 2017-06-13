@@ -46,14 +46,9 @@ console.assert(maxOfThree(100000, 2, 20924848) === 20924848);
 
 function isVowel(char){
     // Your answer here
-    { var vowel = 'a' || 'e' || 'i' || 'o' || 'u' || 'y' || 'A' || 'E' || 'I' || 'O' || 'U' || 'Y';
-      if (char === vowel) {
-        return true
-      } else {
-        return false
-      }
-    }
+    return ['a', 'e', 'i', 'o', 'u', 'y'].indexOf(char.toLowerCase()) !== -1
 }
+
 
 console.log(isVowel('a'))
 //READ IF SINGLE CHARACTER IS vowel
@@ -117,7 +112,7 @@ console.assert(getLength('Lorem ipsum dolor sit amet, consectetur adipisicing el
 // A:
 
 function greaterThan(num1, num2) {
-  if (num2 > num1) {
+  if (num1 < num2) {
     return true;
   } else {
     return false;
